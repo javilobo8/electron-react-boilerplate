@@ -1,4 +1,5 @@
-import { app, BrowserWindow } from 'electron';
+/* eslint global-require: 0 */
+import {app, BrowserWindow} from 'electron';
 import MenuBuilder from './menu';
 
 let mainWindow = null;
@@ -20,7 +21,7 @@ const installExtensions = async () => {
   const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
   const extensions = [
     'REACT_DEVELOPER_TOOLS',
-    'REDUX_DEVTOOLS'
+    'REDUX_DEVTOOLS',
   ];
 
   return Promise
@@ -50,7 +51,7 @@ app.on('ready', async () => {
   mainWindow = new BrowserWindow({
     show: false,
     width: 1024,
-    height: 728
+    height: 728,
   });
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import styles from './Counter.css';
 
 class Counter extends Component {
@@ -12,7 +12,7 @@ class Counter extends Component {
   };
 
   render() {
-    const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props;
+    const {increment, incrementIfOdd, incrementAsync, decrement, counter} = this.props;
     return (
       <div>
         <div className={styles.backButton} data-tid="backButton">

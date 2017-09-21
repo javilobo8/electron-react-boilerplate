@@ -12,8 +12,15 @@
   "rules": {
     "arrow-parens": ["off"],
     "compat/compat": "error",
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }],
     "consistent-return": "off",
-    "comma-dangle": "off",
+    "object-curly-spacing": ["error", "never"],
     "generator-star-spacing": "off",
     "import/no-unresolved": "error",
     "import/no-extraneous-dependencies": "off",
@@ -27,10 +34,10 @@
     "react/sort-comp": ["error", {
       "order": ["type-annotations", "static-methods", "lifecycle", "everything-else", "render"]
     }],
-    "react/jsx-no-bind": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "react/require-default-props": "off",
-    "react/prefer-stateless-function": "off"
+    "react/prefer-stateless-function": "off",
+    "react/forbid-prop-types": "off"
   },
   "plugins": [
     "import",
